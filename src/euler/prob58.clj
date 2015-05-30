@@ -6,15 +6,6 @@
 (defn count-primes [nums]
   (count (filter is-prime? nums)))
 
-(comment
-  (let [n (count nums)]
-    (loop [p 0 i 0]
-      (if (>= i n)
-        p
-        (if (is-prime? (nth nums i))
-          (recur (inc p) (inc i))
-          (recur p (inc i)))))))
-
 (defn D [^long n] ;; 4n^2 + 4n + 1 = (2n+1)^2
   (if (zero? n) 1
       (+ (* 4 (* n n))
@@ -46,10 +37,6 @@
           d (D n)
           nprms (+ nprms (count-primes [a b c])) ; d is never prime
           ratio (double (/ nprms nums))]
-      ;; (if (or
-      ;;      (< n 10)
-      ;;      (zero? (mod n 300)))
-      ;;   (println n a b c d " [" nprms "/" nums "] " ratio))
       (if (and (> n 0)
                (< ratio threshold))
         (do
