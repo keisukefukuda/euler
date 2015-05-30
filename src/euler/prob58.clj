@@ -44,7 +44,7 @@
           (println "n = " n ", answer = " (+ (* 2 n) 1)))
         (recur (inc n) (+ nums 4) nprms)))))
 
-(defn -main [& args]
+(defn run [& args]
   (time
    (answer (if (empty? args)
              0.10

@@ -5,5 +5,4 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/math.numeric-tower "0.0.4"]
-                 [chiara "0.2.0"]]
-  :main euler.prob58)
+                 [chiara "0.2.0"]])
